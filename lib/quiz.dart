@@ -59,41 +59,43 @@ class _QuizState extends State<Quiz> {
               ),
               body: index < Dataset().questions.length
                   ? SingleChildScrollView(
-                      child: Column(
-                      children: [
-                        SizedBox(
-                          height: 50,
-                        ),
-                        Question(questions: Dataset().questions, index: index),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        Answerbutton(
-                            answers: Dataset().answers,
-                            index: index,
-                            x: x,
-                            answerquestion: answerquestion,
-                            answerindex: 0),
-                        Answerbutton(
-                            answers: Dataset().answers,
-                            index: index,
-                            x: x,
-                            answerquestion: answerquestion,
-                            answerindex: 1),
-                        Answerbutton(
-                            answers: Dataset().answers,
-                            index: index,
-                            x: x,
-                            answerquestion: answerquestion,
-                            answerindex: 2),
-                        Answerbutton(
-                            answers: Dataset().answers,
-                            index: index,
-                            x: x,
-                            answerquestion: answerquestion,
-                            answerindex: 3)
-                      ],
-                    ))
+                      child: Center(
+                        child: Column(
+                        children: [
+                          SizedBox(
+                            height: 50,
+                          ),
+                          Question(questions: Dataset().questions, index: index),
+                          SizedBox(
+                            height: 30,
+                          ),
+                          Answerbutton(
+                              answers: Dataset().answers,
+                              index: index,
+                              x: x,
+                              answerquestion: answerquestion,
+                              answerindex: 0),
+                          Answerbutton(
+                              answers: Dataset().answers,
+                              index: index,
+                              x: x,
+                              answerquestion: answerquestion,
+                              answerindex: 1),
+                          Answerbutton(
+                              answers: Dataset().answers,
+                              index: index,
+                              x: x,
+                              answerquestion: answerquestion,
+                              answerindex: 2),
+                          Answerbutton(
+                              answers: Dataset().answers,
+                              index: index,
+                              x: x,
+                              answerquestion: answerquestion,
+                              answerindex: 3)
+                        ],
+                    ),
+                      ))
                   : Endpage(score: score)),
         ],
       );
